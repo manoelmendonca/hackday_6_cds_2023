@@ -205,7 +205,7 @@ No presente trabalho foi analisado um problema de negócio envolvendo empresa do
 
 O trabalho foi desenvolvido durante o 6º Hackday da Comunidade DS, competição de Ciência de Dados ocorrida nos dias 21.22/outubro/2023<sup>3</sup>.
 
-Os participantes da equipe <u>May the Data Be with You</u> foram:
+Os participantes da equipe <b>May the Data Be with You</b> foram:
 - Edilson Santos
 - Aroldo Brancalhão
 - Leonardo Rose
