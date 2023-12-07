@@ -3,9 +3,7 @@ PREVISÃO DE PREÇOS DE PRODUTOS<br>
 NO VAREJO DA MODA
 </h1>
 
-<h1 align="center">
 ![banner](img/DeptoModa.jpg)
-</h1>
 
 # 1. O PROBLEMA DE NEGÓCIO
 
@@ -17,9 +15,7 @@ Na <b>terceira etapa</b> de precificação, a ser implantada com base no resulta
 
 O fluxograma ilustra o processo atual e a introdução da nova etapa de precificação.
 
-<h1 align="center">
 ![banner](img/EstrategiaPrecificacao.png)
-</h1>
 
 # 2. PLANEJAMENTO DA SOLUÇÃO
 
@@ -39,9 +35,7 @@ O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross I
 3. Algoritmos de <i>Machine Learning</i>
 4. Avaliação dos resultados.
 
-<h1 align="center">
 ![banner](img/crispy.png)
-</h1>
 
 
 # 3. COLETA DE DADOS
@@ -79,9 +73,7 @@ Esta etapa tem por objetivo preparar as variáveis (features), bem assim sinteti
 
 A variável alvo é o preço da mercadoria (ou "actual_price"). O histograma indicou assimetria para a direita. Assim, para tornar a distribuição mais próxima da curva normal, fez-se a transformação logarítmica do preço. O resultado é apresentado na figura.
 
-<h1 align="center">
 ![banner](img/LogTransform.jpg)
-</h1>
 
 ## 4.2. Coluna "product_details"
 
@@ -135,9 +127,7 @@ Trazendo a ideia para o presente projeto, durante o pré-processamento, utilizam
 
 Após todo o pré-processamento, fez-se uso do modelo de <i>Random Forest</i> para ranquear as variáveis de acordo com sua capacidade de contribuir no resultado do modelo de previsão. O resultado é apresentado na figura abaixo.
 
-<h1 align="center">
 ![banner](img/RankFeatures.png)
-</h1>
 
 
 # 5. ANÁLISE EXPLORATÓRIA DE DADOS
@@ -161,9 +151,7 @@ O trabalho foi dividido em duas etapas.
 
 Na tabela abaixo apresenta-se o resultado da etapa-1 com o desempenho de cada um dos modelos testados.
 
-<h1 align="center">
 ![banner](img/AlgoritmosML.png)
-</h1>
 
 Como se pode observar, o algoritmo Random Forest foi o que trouxe o melhor resultado para a métrica sob análise, motivo pelo qual foi o algoritmo utilizado na etapa-2.
 - OBS: SMAPE = <i>Symmetric Mean Absolute Percentage Error</i>
@@ -177,15 +165,11 @@ O desempenho do modelo durante a etapa de competição Hackday consta no [quadro
 
 Em relação a esse resultado, vale ressaltar que, durante a competição, o desempenho do modelo esteve sujeito a duas importantes restrições, a saber, o tempo escasso de menos de 48 horas para desenvolvimento do trabalho e o número limitado de submissões para avaliação. Juntas, essas duas restrições limitaram o aprofundamento das pesquisas. Ainda assim, nossa equipe de cientistas de dados conseguiu o honroso <b>1º Lugar na competição</b>, tanto no critério de redução do erro, quanto no critério de votação pelos pares.
 
-<h1 align="center">
 ![banner](img/Hackday6_leaderboard.png)
-</h1>
 
 Em pesquisas posteriores, após encerrada a competição, aplicamos novas rodadas do método CRISP-DM, com revisão da etapa de <i>feature engineering</i>. Com isso, conseguimos melhorar o desempenho do modelo, que alcançou erro percentual SMAPE de <b>8,20%</b>, conforme figura.
 
-<h1 align="center">
 ![banner](img/Hackday6_LateSubmission.png)
-</h1>
 
 
 ## 7.2. Os Principais <i>Insights</i>
@@ -197,17 +181,13 @@ A análise dos dados indicou que os produtos com mais imagens possuem preços ma
 ### 7.2.2. Relação entre "número de avaliações" e "preço do produto"
 A análise dos dados não indicou haver correlação notável entre essas características.
 
-<h1 align="center">
 ![banner](img/Insight_02.png)
-</h1>
 
 
 ### 7.2.3. Relação entre "condição do estoque" e "preço do produto"
 A análise mostrou uma tendência a terem preços maiores os produtos em falta no estoque. Tal condição pode representar uma estratégia da empresa para administrar o estoque, majorando os preços de produtos que estejam em vias de terem seu estoque zerado.
 
-<h1 align="center">
 ![banner](img/Insight_03.png)
-</h1>
 
 
 # 8. CONCLUSÃO
