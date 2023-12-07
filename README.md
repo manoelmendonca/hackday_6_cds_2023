@@ -29,11 +29,12 @@ São dois os resultados esperados:
 
 ## 2.2. Estratégia de Solução
 
-O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross Industry Standard Process for Data Mining</i>", uma abordagem cíclica objetivando aprimorar a qualidade e agilizar a entrega de resultado em projetos de Ciência de Dados. O método pode ser resumido nas seguintes 4 grandes etapas:
+O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross Industry Standard Process for Data Mining</i>", uma abordagem cíclica objetivando aprimorar a qualidade e agilizar a entrega de resultado em projetos de Ciência de Dados. O método pode ser resumido no seguinte conjunto de etapas:
 1. Entendimento do negócio
 2. Coleta, tratamento e modelagem de dados
 3. Algoritmos de <i>Machine Learning</i>
-4. Avaliação dos resultados.
+4. Avaliação dos resultados
+5. Entrada em produção.
 
 ![banner](img/crispy.png)
 
