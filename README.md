@@ -164,7 +164,7 @@ Como se pode observar, o algoritmo Random Forest foi o que trouxe o melhor resul
 
 O desempenho do modelo durante a etapa de competição Hackday consta no [quadro do Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/leaderboard), tendo alcançado erro percentual SMAPE de <b>9,11%</b>, conforme figura abaixo.
 
-Em relação a esse resultado, vale ressaltar que, durante a competição, o desempenho do modelo esteve sujeito a duas importantes restrições, a saber, o tempo escasso de menos de 48 horas para desenvolvimento do trabalho e o número limitado de submissões para avaliação. Juntas, essas duas restrições limitaram o aprofundamento das pesquisas. Ainda assim, nossa equipe de cientistas de dados conseguiu o honroso <b>1º Lugar no certame</b>, tanto no critério de redução do erro, quanto no critério de votação pelos pares.
+Em relação a esse resultado, vale ressaltar que, durante a competição, o desempenho do modelo esteve sujeito a duas importantes restrições, a saber, o tempo escasso de menos de 48 horas para desenvolvimento do trabalho e o número limitado de submissões para avaliação. Juntas, essas duas restrições limitaram o aprofundamento das pesquisas. Ainda assim, nossa equipe de cientistas de dados conseguiu o honroso <b>1º Lugar no Certame</b>, tanto no critério de redução do erro, quanto no critério de votação pelos pares.
 
 ![banner](img/Hackday6_leaderboard.png)
 
