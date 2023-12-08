@@ -61,7 +61,7 @@ Conforme apresentado na seção 1 de descrição do problema, as informações a
 | sub_category | subcategoria do produto |
 | fabrication_time | tempo de fabricação do produto em dias |
 | title | título do anúncio do produto |
-| actual_price | preço atual (variável de resposta) |
+| actual_price | preço alvo (variável de resposta) |
 
 (Fonte: Kaggle)
 
