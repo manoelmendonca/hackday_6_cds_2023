@@ -105,9 +105,6 @@ Posteriormente àquele Hackday, implementamos novos aprimoramentos à etapa de "
 - A sub-coluna "size" foi convertida para informação numérica, respeitando uma grade de tamanhos, do tipo XXL, XL, L, M, S, XS, XXS, etc.
 - As colunas "title" e "description" contêm extensos textos livres descritivos das mercadorias. Assim, foi realizada a contagem de todas as palavras que, ranqueadas, foram convertidas em 220 colunas binárias indicativas de quais palavras definem cada produto. Essa técnica foi utilizada também com outras sub-colunas, como "other details" e "generic name".
 
-Além das transformações citadas acima, outras são passíveis de serem realizadas no futuro com vistas ao aprimoramento do modelo. Por exemplo:
-- As sub-colunas com informações de cores - "color" e "brand color" - podem ser convertidas para informações numéricas do tipo RGB.
-
 ## 4.4. Pré-Processamento: codificação de categorias
 
 A base de dados deste projeto se caracteriza por ter uma quantidade expressiva de variáveis categóricas em forma de texto. Como a maioria dos algoritmos de <i>machine learning</i> requerem dados numéricos, foi providenciada sua codificação numérica por meio de "one-hot encoding" e "target encoding".
