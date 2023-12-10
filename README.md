@@ -165,7 +165,7 @@ Em relação a esse resultado, vale ressaltar que, durante a competição, o des
 
 ![banner](img/Hackday6_leaderboard.png)
 
-Em pesquisas posteriores, após encerrada a competição, aplicamos novas rodadas do método CRISP-DM, com revisão da etapa de <i>feature engineering</i>. Com isso, conseguimos melhorar o desempenho do modelo, que alcançou erro percentual SMAPE de <b>8,20%</b>, conforme figura.
+Em pesquisas posteriores, após encerrada a competição, aplicamos novas rodadas do método CRISP-DM, com revisão da etapa de <i>feature engineering</i>. Com isso, conseguimos melhorar o desempenho do modelo, que alcançou erro percentual SMAPE de <b>8,19%</b>, conforme figura.
 
 ![banner](img/Hackday6_LateSubmission.png)
 
