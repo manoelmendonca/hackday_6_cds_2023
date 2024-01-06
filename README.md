@@ -101,9 +101,9 @@ Além do pré-processamento da coluna "product_details" citado acima, os seguint
 - A coluna "images" foi utilizada para contar o número de fotografias disponíveis para cada produto.
 
 Posteriormente àquele Hackday, implementamos novos aprimoramentos à etapa de "feature engineering", resultando em melhoria da acurácia do modelo. As novas técnicas utilizadas foram as seguintes:
+- Contagem de Palavras: as colunas "title" e "description" contêm extensos textos livres descritivos das mercadorias. Assim, foi realizada a contagem de todas as palavras que, ranqueadas, foram convertidas em 220 colunas binárias indicativas de quais palavras definem cada produto. Essa técnica foi utilizada também com outras sub-colunas, como "other details" e "generic name".
 - As sub-colunas "pack of" e "number of contents in sales package" tiveram seu conteúdo reunido em uma única coluna, dado conterem informações semelhantes.
 - A sub-coluna "size" foi convertida para informação numérica, respeitando uma grade de tamanhos, do tipo XXL, XL, L, M, S, XS, XXS, etc.
-- As colunas "title" e "description" contêm extensos textos livres descritivos das mercadorias. Assim, foi realizada a contagem de todas as palavras que, ranqueadas, foram convertidas em 220 colunas binárias indicativas de quais palavras definem cada produto. Essa técnica foi utilizada também com outras sub-colunas, como "other details" e "generic name".
 
 ## 4.4. Pré-Processamento: codificação de categorias
 
