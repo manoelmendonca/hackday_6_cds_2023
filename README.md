@@ -190,7 +190,7 @@ A análise mostrou uma tendência a terem preços maiores os produtos em falta n
 
 # 8. CONCLUSÃO
 
-No presente trabalho foi analisado um problema de negócio envolvendo empresa do ramo varejista, tendo por objetivo o desenvolvimento de modelo de <i>machine learning</i> para previsão de preços de produtos. Feito o trabalho, dois resultados foram alcançados: (i) um modelo de <i>machine learning</i> com erro menor que 8,6% em ambiente de produção, e (ii) alguns <i>insights</i> quanto ao comportamento do negócio.
+No presente trabalho foi analisado um problema de negócio envolvendo empresa do ramo varejista, tendo por objetivo o desenvolvimento de modelo de <i>machine learning</i> para previsão de preços de produtos. Feito o trabalho, dois resultados foram alcançados: (i) um modelo de <i>machine learning</i> com erro menor que 8,2% em ambiente de produção, e (ii) alguns <i>insights</i> quanto ao comportamento do negócio.
 
 
 # 9. PRÓXIMOS PASSOS
