@@ -207,7 +207,7 @@ Os participantes da equipe <b>MAY THE DATA BE WITH YOU</b> foram:
 - Edilson Santos
 - Aroldo Brancalhão
 - Leonardo Rose
-- [Manoel Mendonça](https://www.linkedin.com/in/manoelmendonca-eng-adv/)
+- Manoel Mendonça
 - M.Alessandro Fonseca
 
 
