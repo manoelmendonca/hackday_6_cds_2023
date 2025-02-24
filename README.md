@@ -32,7 +32,7 @@ O desafio da Eequipe de Cientistas de Dados é encontrar quais os preços dos no
 
 São dois os resultados esperados:
 1. O desenvolvimento de um procedimento de análise de dados e <i>machine learning</i> projetado para atender as demandas da empresa quanto a previsão de preços de mercadorias, e
-2. Elaboração de <i>insights</i> relacionados ao negócio, a partir da análise dos dados.
+2. Elaboração de [insights](#72-os-principais-insights) relacionados ao negócio, a partir da análise dos dados.
 
 ## 2.2. Estratégia de Solução
 
@@ -48,7 +48,7 @@ O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross I
 
 # 3. COLETA DE DADOS
 
-Conforme apresentado na seção 1 - descrição do problema, as informações a serem utilizadas no projeto de previsão de preços foram fornecidas pela empresa cliente. O dataset fornecido tem a seguinte estrutura:
+Conforme apresentado na seção 1 - descrição do problema de negócio, as informações a serem utilizadas no projeto de previsão de preços foram fornecidas pela empresa cliente. O dataset fornecido tem a seguinte estrutura:
 
 <table align="center">
   <tr>
@@ -100,7 +100,7 @@ Conforme apresentado na seção 1 - descrição do problema, as informações a 
     <td>Tempo médio de entrega em dias.</td>
   </tr>
   <tr>
-    <td align="center">product_details</td>
+    <td align="center">[product_details](#42-coluna-product_details)</td>
     <td>Dicionário contendo detalhes do produto.</td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ Conforme apresentado na seção 1 - descrição do problema, as informações a 
 </table>
 
 
-(Fonte: Kaggle)
+(Fonte: [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview))
 
 
 # 4. FEATURE ENGINEERING
@@ -139,7 +139,7 @@ A variável alvo é o preço da mercadoria (ou "actual_price"). O histograma ind
 
 <table align="center">
 <tr><td>
-<img src="img/LogTransform.png" align="center">
+<img src="img/LogTransform.jpg" align="center">
 </td></tr>
 </table>
 

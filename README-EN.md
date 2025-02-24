@@ -33,7 +33,7 @@ The challenge for the Data Science Team is to determine the prices of new produc
 
 There are two expected outcomes:
 1. The development of a data analysis and machine learning procedure designed to meet the company's demands for predicting merchandise prices, and
-2. The elaboration of business-related insights from the data analysis.
+2. The elaboration of [business-related insights](#72-main-insights) from the data analysis.
 
 ## 2.2. Solution Strategy
 
@@ -44,12 +44,12 @@ The work was carried out following the CRISP-DM<sup>1</sup> method, or "Cross In
 4. Results evaluation
 5. Production implementation.
 
-![banner](img/crispy.png)
+![banner](img/crispdm_method.png)
 
 
 # 3. DATA COLLECTION
 
-As presented in Section 1 - problem description, the information to be used in the price prediction project was provided by the client company. The dataset provided has the following structure:
+As presented in Section 1 - business problem, the information to be used in the price prediction project was provided by the client company. The dataset provided has the following structure:
 
 <table align="center">
   <tr>
@@ -127,7 +127,7 @@ As presented in Section 1 - problem description, the information to be used in t
 </table>
 
 
-(Source: Kaggle)
+(Source: [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview))
 
 
 # 4. FEATURE ENGINEERING
@@ -140,7 +140,7 @@ The target variable is the price of the merchandise (or "actual_price"). The his
 
 <table align="center">
 <tr><td>
-<img src="img/LogTransform.png" align="center">
+<img src="img/LogTransform.jpg" align="center">
 </td></tr>
 </table>
 
