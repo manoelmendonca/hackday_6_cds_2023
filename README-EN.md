@@ -20,7 +20,7 @@ The flowchart illustrates the current process and the introduction of the new pr
 
 <table align="center">
 <tr><td>
-<img src="img/EstrategiaPrecificacao.png" align="center">
+<img src="img/EstrategiaPrecificacao_EN.png" align="center">
 </td></tr>
 </table>
 
