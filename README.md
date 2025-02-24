@@ -3,7 +3,7 @@ PREVISÃO DE PREÇOS DE PRODUTOS<br>
 NO VAREJO DA MODA
 </h1>
 
-<h6>- <a href="README-en.md">ENGLISH VERSION</a></h6>
+<h6>- <a href="README-EN.md">ENGLISH VERSION</a></h6>
 
 ![banner](img/DeptoModa.jpg)
 
@@ -17,7 +17,12 @@ A partir dos estudos a serem realizados pela Equipe de Dados, deseja-se implanta
 
 O fluxograma ilustra o processo atual e a introdução da nova etapa de precificação.
 
-![banner](img/EstrategiaPrecificacao.png)
+<table align="center">
+<tr><td>
+<img src="img/EstrategiaPrecificacao.png" align="center">
+</td></tr>
+</table>
+
 
 # 2. PLANEJAMENTO DA SOLUÇÃO
 
@@ -45,25 +50,81 @@ O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross I
 
 Conforme apresentado na seção 1 - descrição do problema, as informações a serem utilizadas no projeto de previsão de preços foram fornecidas pela empresa cliente. O dataset fornecido tem a seguinte estrutura:
 
-| COLUNA | Descrição |
-|--------|-----------|
-| _id | identificador único da linha |
-| pid | identificador do produto |
-| average_rating | avaliação média do produto |
-| number_of_reviews | número de avaliações do produto |
-| brand | marca do produto |
-| category | categoria do produto |
-| crawled_at | data e hora em que o dado foi coletado no site |
-| description | descrição do produto |
-| images | url das imagens do produto na vitrine |
-| out_of_stock | se o produto encontra-se ou não no estoque |
-| avg_time_delivery_days | tempo médio de entrega em dias |
-| product_details | dicionário contendo detalhes do produto |
-| seller | vendedor do produto |
-| sub_category | subcategoria do produto |
-| fabrication_time | tempo de fabricação do produto em dias |
-| title | título do anúncio do produto |
-| actual_price | preço alvo (variável de resposta) |
+<table align="center">
+  <tr>
+    <th align="center">ATRIBUTO</th>
+    <th>DESCRIÇÃO E OBSERVAÇÕES</th>
+  </tr>
+  <tr>
+    <td align="center">_id</td>
+    <td>Identificador único da linha.</td>
+  </tr>
+  <tr>
+    <td align="center">pid</td>
+    <td>Identificador do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">average_rating</td>
+    <td>Avaliação média do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">number_of_reviews</td>
+    <td>Número de avaliações do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">brand</td>
+    <td>Marca do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">category</td>
+    <td>Categoria do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">crawled_at</td>
+    <td>Data e hora em que o dado foi coletado no site.</td>
+  </tr>
+  <tr>
+    <td align="center">description</td>
+    <td>Descrição do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">images</td>
+    <td>URL das imagens do produto na vitrine.</td>
+  </tr>
+  <tr>
+    <td align="center">out_of_stock</td>
+    <td>Se o produto encontra-se ou não no estoque.</td>
+  </tr>
+  <tr>
+    <td align="center">avg_time_delivery_days</td>
+    <td>Tempo médio de entrega em dias.</td>
+  </tr>
+  <tr>
+    <td align="center">product_details</td>
+    <td>Dicionário contendo detalhes do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">seller</td>
+    <td>Vendedor do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">sub_category</td>
+    <td>Subcategoria do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">fabrication_time</td>
+    <td>Tempo de fabricação do produto em dias.</td>
+  </tr>
+  <tr>
+    <td align="center">title</td>
+    <td>Título do anúncio do produto.</td>
+  </tr>
+  <tr>
+    <td align="center">actual_price</td>
+    <td>Preço alvo (variável de resposta).</td>
+  </tr>
+</table>
+
 
 (Fonte: Kaggle)
 
@@ -76,7 +137,12 @@ Esta etapa tem por objetivo preparar as variáveis (features), bem assim sinteti
 
 A variável alvo é o preço da mercadoria (ou "actual_price"). O histograma indicou assimetria para a direita. Assim, para tornar a distribuição mais próxima da curva normal, fez-se a transformação logarítmica do preço. O resultado é apresentado na figura.
 
-![banner](img/LogTransform.jpg)
+<table align="center">
+<tr><td>
+<img src="img/LogTransform.png" align="center">
+</td></tr>
+</table>
+
 
 ## 4.2. Coluna "product_details"
 
@@ -127,7 +193,11 @@ Trazendo a ideia para o presente projeto, durante o pré-processamento, utilizam
 
 Após todo o pré-processamento, fez-se uso do modelo de <i>Random Forest</i> para ranquear as variáveis de acordo com sua capacidade de contribuir no resultado do modelo de previsão. O resultado é apresentado na figura abaixo.
 
-![banner](img/RankFeatures.png)
+<table align="center">
+<tr><td>
+<img src="img/RankFeatures.png" align="center">
+</td></tr>
+</table>
 
 
 # 5. ANÁLISE EXPLORATÓRIA DE DADOS
@@ -151,7 +221,58 @@ O trabalho foi dividido em duas etapas.
 
 Na tabela abaixo apresenta-se o resultado da etapa-1 com o desempenho de cada um dos modelos testados.
 
-![banner](img/AlgoritmosML.png)
+<table align="center">
+  <tr>
+    <th align="center">Model</th>
+    <th align="right">MAE</th>
+    <th align="right">MAPE</th>
+    <th align="right">RMSE</th>
+    <th align="right">SMAPE</th>
+  </tr>
+  <tr>
+    <td align="center">RandomForest</td>
+    <td align="right">170.251782</td>
+    <td align="right">0.108400</td>
+    <td align="right">391.477521</td>
+    <td align="right">10.295032</td>
+  </tr>
+  <tr>
+    <td align="center">VotingRegressor</td>
+    <td align="right">192.442082</td>
+    <td align="right">0.125997</td>
+    <td align="right">380.228307</td>
+    <td align="right">12.166790</td>
+  </tr>
+  <tr>
+    <td align="center">XGBoost</td>
+    <td align="right">203.984165</td>
+    <td align="right">0.133901</td>
+    <td align="right">394.197619</td>
+    <td align="right">12.941397</td>
+  </tr>
+  <tr>
+    <td align="center">CatBoost</td>
+    <td align="right">206.766272</td>
+    <td align="right">0.136696</td>
+    <td align="right">378.871272</td>
+    <td align="right">13.279772</td>
+  </tr>
+  <tr>
+    <td align="center">LightGBM</td>
+    <td align="right">220.647464</td>
+    <td align="right">0.145251</td>
+    <td align="right">411.002568</td>
+    <td align="right">14.018622</td>
+  </tr>
+  <tr>
+    <td align="center">LinearRegression</td>
+    <td align="right">348.806300</td>
+    <td align="right">0.231574</td>
+    <td align="right">1004.327188</td>
+    <td align="right">22.284824</td>
+  </tr>
+</table>
+
 
 Como se pode observar, o algoritmo Random Forest foi o que trouxe o melhor resultado para a métrica sob análise, motivo pelo qual foi o algoritmo utilizado na etapa-2.
 
@@ -170,7 +291,11 @@ Em relação a esse resultado, vale ressaltar que, durante a competição, o des
 
 Em pesquisas posteriores, após encerrada a competição, aplicamos novas rodadas do método CRISP-DM, com revisão da etapa de <i>feature engineering</i>. Com isso, conseguimos melhorar o desempenho do modelo, que alcançou erro percentual SMAPE de <b>8,19%</b>, conforme figura.
 
-![banner](img/Hackday6_LateSubmission.png)
+<table align="center">
+<tr><td>
+<img src="img/Hackday6_LateSubmission.png" align="center">
+</td></tr>
+</table>
 
 
 ## 7.2. Os Principais <i>Insights</i>
@@ -192,7 +317,11 @@ A análise dos dados não indicou haver correlação notável entre essas caract
 
 A análise mostrou uma tendência a terem preços maiores os produtos em falta no estoque. Tal condição pode representar uma estratégia da empresa para administrar o estoque, majorando os preços de produtos que estejam em vias de terem seu estoque zerado.
 
-![banner](img/Insight_03.png)
+<table align="center">
+<tr><td>
+<img src="img/Insight_03.png" align="center">
+</td></tr>
+</table>
 
 
 # 8. CONCLUSÃO
