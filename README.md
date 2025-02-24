@@ -3,15 +3,17 @@ PREVISÃO DE PREÇOS DE PRODUTOS<br>
 NO VAREJO DA MODA
 </h1>
 
+<h6>- <a href="README-en.md">ENGLISH VERSION</a></h6>
+
 ![banner](img/DeptoModa.jpg)
 
 # 1. O PROBLEMA DE NEGÓCIO
 
-A empresa Dados & Decotes atua no e-commerce no ramo de moda masculina e feminina com foco em roupas, calçados e acessórios. O desafio atual da varejista é <b>otimizar os preços dos seus produtos</b> de modo a maximizar o lucro nas vendas.
+Nesse ambiente fictício, a empresa Dados & Decotes atua no e-commerce no ramo de moda masculina e feminina com foco em roupas, calçados e acessórios. O desafio atual da varejista é **otimizar os preços dos seus produtos** de modo a maximizar o lucro nas vendas.
 
-O atual sistema de precificação de produtos tem duas etapas. <b>Primeiro</b> é colocada margem fixa de lucro sobre o preço de custo do produto. Na <b>segunda etapa</b>, após 3 meses de avaliação do comportamento das vendas, os preços são ajustados de acordo com as quantidades demandadas de cada produto.
+O sistema original de precificação de produtos tem duas etapas. <b>Primeiro</b> é colocada margem fixa de lucro sobre o preço de custo do produto. Na <b>segunda etapa</b>, após 3 meses de avaliação do comportamento das vendas, os preços são ajustados de acordo com as quantidades demandadas de cada produto.
 
-Na <b>terceira etapa</b> de precificação, a ser implantada com base no resultado dos estudos de nossa Equipe de Cientistas de Dados, os preços dos produtos novos e recém lançados no mercado serão otimizado com base nas suas características, tais como marca, categoria, tecido e outras.
+A partir dos estudos a serem realizados pela Equipe de Dados, deseja-se implantar uma **terceira etapa** de precificação, na qual os preços dos produtos novos e recém lançados no mercado serão otimizado com base nas suas características, tais como marca, categoria, tecido e outras.
 
 O fluxograma ilustra o processo atual e a introdução da nova etapa de precificação.
 
@@ -41,7 +43,7 @@ O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross I
 
 # 3. COLETA DE DADOS
 
-Conforme apresentado na seção 1 de descrição do problema, as informações a serem utilizadas no projeto de previsão de preços foram fornecidas pela empresa cliente. O dataset fornecido tem a seguinte estrutura:
+Conforme apresentado na seção 1 - descrição do problema, as informações a serem utilizadas no projeto de previsão de preços foram fornecidas pela empresa cliente. O dataset fornecido tem a seguinte estrutura:
 
 | COLUNA | Descrição |
 |--------|-----------|
@@ -78,7 +80,7 @@ A variável alvo é o preço da mercadoria (ou "actual_price"). O histograma ind
 
 ## 4.2. Coluna "product_details"
 
-Esta coluna é de grande importância, pois contém diversas <b>sub-colunas</b> que informam as características de cada produto. Observa-se que diferentes produtos podem ter diferentes tipos de características. Vejamos alguns exemplos:
+Esta coluna é de grande importância, pois contém diversas **sub-colunas** que informam as características de cada produto. Observa-se que diferentes produtos podem ter diferentes tipos de características. Vejamos alguns exemplos:
 
 <b>Exemplo-1</b>: produto nº 22898
 - Título: <b>Slim Men Light Blue Jeans</b>
@@ -152,7 +154,8 @@ Na tabela abaixo apresenta-se o resultado da etapa-1 com o desempenho de cada um
 ![banner](img/AlgoritmosML.png)
 
 Como se pode observar, o algoritmo Random Forest foi o que trouxe o melhor resultado para a métrica sob análise, motivo pelo qual foi o algoritmo utilizado na etapa-2.
-- OBS: SMAPE = <i>Symmetric Mean Absolute Percentage Error</i>
+
+- OBS: SMAPE = *Symmetric Mean Absolute Percentage Error*
 
 
 # 7. RESULTADOS
@@ -173,16 +176,20 @@ Em pesquisas posteriores, após encerrada a competição, aplicamos novas rodada
 ## 7.2. Os Principais <i>Insights</i>
 
 ### 7.2.1. Relação entre "número de imagens" e "preço do produto"
+
 A análise dos dados indicou que os produtos com mais imagens possuem preços maiores. A partir deste <i>insight</i>, é possível afirmar que uma campanha de aprimoramento das informações visuais dos produtos pode ter impacto positivo na demanda, e consequentemente no preço.
+
 ![banner](img/Insight_01.png)
 
 ### 7.2.2. Relação entre "número de avaliações" e "preço do produto"
+
 A análise dos dados não indicou haver correlação notável entre essas características.
 
 ![banner](img/Insight_02.png)
 
 
 ### 7.2.3. Relação entre "condição do estoque" e "preço do produto"
+
 A análise mostrou uma tendência a terem preços maiores os produtos em falta no estoque. Tal condição pode representar uma estratégia da empresa para administrar o estoque, majorando os preços de produtos que estejam em vias de terem seu estoque zerado.
 
 ![banner](img/Insight_03.png)
