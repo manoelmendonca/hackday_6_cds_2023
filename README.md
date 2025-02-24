@@ -100,8 +100,8 @@ Conforme apresentado na seção 1 - descrição do problema de negócio, as info
     <td>Tempo médio de entrega em dias.</td>
   </tr>
   <tr>
-    <td align="center">[product_details](#42-coluna-product_details)</td>
-    <td>Dicionário contendo detalhes do produto.</td>
+    <td align="center">product_details</td>
+    <td>Dicionário contendo detalhes do produto (ver seção 4.2)</td>
   </tr>
   <tr>
     <td align="center">seller</td>
@@ -168,7 +168,7 @@ Além do pré-processamento da coluna "product_details" citado acima, os seguint
 - As sub-colunas "fabric" (tipo de tecido) e "brand fit" (~forma do produto) foram utilizadas para gerar as colunas binárias "has_cotton", "has_polyester", "has_lycra", "is_regular", "is_slim" e "is_fit".
 - A coluna "images" foi utilizada para contar o número de fotografias disponíveis para cada produto.
 
-Posteriormente àquele Hackday, implementamos novos aprimoramentos à etapa de "feature engineering", resultando em melhoria da acurácia do modelo. As novas técnicas utilizadas foram as seguintes:
+Posteriormente àquele Hackday, implementamos outros aprimoramentos à etapa de "feature engineering", resultando em melhoria da acurácia do modelo. As novas técnicas utilizadas foram as seguintes:
 - Contagem de Palavras: as colunas "title" e "description" contêm extensos textos livres descritivos das mercadorias. Assim, foi realizada a contagem de todas as palavras que, ranqueadas, foram convertidas em 220 colunas binárias indicativas de quais palavras definem cada produto. Essa técnica foi utilizada também com outras sub-colunas, como "other details" e "generic name".
 - As sub-colunas "pack of" e "number of contents in sales package" tiveram seu conteúdo reunido em uma única coluna, dado conterem informações semelhantes.
 - A sub-coluna "size" foi convertida para informação numérica, respeitando uma grade de tamanhos, do tipo XXL, XL, L, M, S, XS, XXS, etc.
@@ -210,7 +210,7 @@ As etapas foram:
 - Análise multivariada - busca por correlações entre as variáveis;
 - Formulação de hipóteses de negócios.
 
-Como resultado dessa análise, foram observadas algumas características do negócio e seus efeitos no preço das mercadorias. As conclusões estão descritas no tópico 7.2, abaixo.
+Como resultado dessa análise, foram observadas algumas características do negócio e seus efeitos no preço das mercadorias. As conclusões estão descritas no [tópico 7.2](#72-os-principais-insights), abaixo.
 
 
 # 6. ALGORITMOS DE <i>MACHINE LEARNING</i>

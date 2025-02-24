@@ -102,7 +102,7 @@ As presented in Section 1 - business problem, the information to be used in the 
   </tr>
   <tr>
     <td align="center">product_details</td>
-    <td>Dictionary containing product details.</td>
+    <td>Dictionary containing product details (see section 4.2)</td>
   </tr>
   <tr>
     <td align="center">seller</td>
@@ -170,7 +170,7 @@ In addition to the pre-processing of the "product_details" column mentioned abov
 - The sub-columns "fabric" (type of fabric) and "brand fit" (product shape) were used to generate the binary columns "has_cotton," "has_polyester," "has_lycra," "is_regular," "is_slim," and "is_fit."
 - The "images" column was used to count the number of photographs available for each product.
 
-Following that Hackday, we implemented further enhancements to the "feature engineering" stage, resulting in improved model accuracy. The new techniques used were as follows:
+Following that Hackday, we implemented other enhancements to the "feature engineering" stage, resulting in improved model accuracy. The new techniques used were as follows:
 - Word Count: The "title" and "description" columns contain extensive free-form text describing the merchandise. Thus, a count of all words was conducted, which, once ranked, were converted into 220 binary columns indicating which words define each product. This technique was also used with other sub-columns such as "other details" and "generic name."
 - The sub-columns "pack of" and "number of contents in sales package" had their contents combined into a single column, as they contain similar information.
 - The "size" sub-column was converted to numeric information, respecting a size scale, such as XXL, XL, L, M, S, XS, XXS, etc.
@@ -212,7 +212,7 @@ The stages were:
 - Multivariate analysis - searching for correlations between variables;
 - Formulation of business hypotheses.
 
-As a result of this analysis, some characteristics of the business and their effects on the prices of the merchandise were observed. The conclusions are described in section 7.2, below.
+As a result of this analysis, some characteristics of the business and their effects on the prices of the merchandise were observed. The conclusions are described in [section 7.2](#72-main-insights), below.
 
 
 # 6. MACHINE LEARNING ALGORITHMS
