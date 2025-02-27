@@ -173,7 +173,30 @@ Posteriormente àquele Hackday, implementamos outros aprimoramentos à etapa de 
 - As sub-colunas "pack of" e "number of contents in sales package" tiveram seu conteúdo reunido em uma única coluna, dado conterem informações semelhantes.
 - A sub-coluna "size" foi convertida para informação numérica, respeitando uma grade de tamanhos, do tipo XXL, XL, L, M, S, XS, XXS, etc.
 
-## 4.4. Pré-Processamento: codificação de categorias
+## 4.4. Descrição de mercadorias e contagem de palavras
+
+A base de dados contém muitas variáveis em texto, em especial o campo de descrição do produto - "description" - caracterizado como texto livre. Visando a aproveitar essa informação, foi elaborado código para extração e contagem de palavras (seção 2.7 do código). O algoritmo tem a seguinte sequência de passos:
+
+1. Seleção de um subconjunto de colunas que contenham informações informações de texto relevantes para uma análise detalhada. É o caso da coluna "description" e também "title", "OTHER DETAILS", "category", entre outras.
+
+2. Criação de um conjunto de palavras-chave, por iteração e busca nas colunas selecionadas. No processaoemto, foram encontradas 6.820 palavras únicas.
+
+3. Contagem de palavras, de modo a definir a importância relativa de cada uma como função de sua frequência na base.
+
+4. Filtragem de palavras por ocorrência, de modo a manter no processamento apenas as palavras de maior frequência, consideradas as mais importantes. No presente caso, foram mantidas 275 palavras de maior frequência.
+
+5. Criação de 275 colunas no dataframe, para representar a ocorrência de cada palavra em cada registro da base.
+
+Com a inclusão dessas 275 novas *features*, foi possível obter expressiva melhoria no desempenho do modelo final de regressão.
+
+<table align="center">
+<tr><td>
+<img src="img/WordCloud3.png" align="center">
+</td></tr>
+</table>
+
+
+## 4.5. Pré-Processamento: codificação de categorias
 
 A base de dados deste projeto se caracteriza por ter uma quantidade expressiva de variáveis categóricas em forma de texto. Como a maioria dos algoritmos de <i>machine learning</i> requerem dados numéricos, foi providenciada sua codificação numérica por meio de "one-hot encoding" e "target encoding".
 
@@ -183,13 +206,13 @@ A codificação do tipo "target encoding", ou codificação focada no alvo, busc
 
 No presente projeto, a maioria das variáveis categóricas foram codificadas utilizando o método "target encoding".
 
-## 4.5. Pré-Processamento: K-MEANS para agrupamento de produtos semelhantes
+## 4.6. Pré-Processamento: K-MEANS para agrupamento de produtos semelhantes
 
 O método K-Means é um algoritmo não-supervisionado de agrupamento (ou clusterização). Há autores que sugerem a utilização desse algoritmo de agrupamento como estratégia não-linear para redução de dimensionalidade, ou ainda para a criação de colunas extras para treinar um outro modelo (ver Géron<sup>4</sup>, pg. 265).
 
 Trazendo a ideia para o presente projeto, durante o pré-processamento, utilizamos o método K-Means para formar grupos de produtos com características semelhantes para depois oferecer esta informação como uma nova coluna para o modelo de previsão de preços. Várias combinações de características dos produtos foram experimentadas de modo a permitir as clusterizações mais eficientes. Ao final, foram aproveitados três agrupamentos distintos, resultando em aumento da precisão do modelo.
 
-## 4.6. Pré-Processamento: seleção de variáveis
+## 4.7. Pré-Processamento: seleção de variáveis
 
 Após todo o pré-processamento, fez-se uso do modelo de <i>Random Forest</i> para ranquear as variáveis de acordo com sua capacidade de contribuir no resultado do modelo de previsão. O resultado é apresentado na figura abaixo.
 
