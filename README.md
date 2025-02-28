@@ -179,11 +179,11 @@ A base de dados contém muitas variáveis em texto, em especial o campo de descr
 
 1. Seleção de um subconjunto de colunas que contenham informações informações de texto relevantes para uma análise detalhada. É o caso da coluna "description" e também "title", "OTHER DETAILS", "category", entre outras.
 
-2. Criação de um conjunto de palavras-chave, por iteração e busca nas colunas selecionadas. No processaoemto, foram encontradas 6.820 palavras únicas.
+2. Criação de um conjunto de palavras-chave, por iteração e busca nas colunas selecionadas. No processamento, foram encontradas **6.820** palavras únicas.
 
 3. Contagem de palavras, de modo a definir a importância relativa de cada uma como função de sua frequência na base.
 
-4. Filtragem de palavras por ocorrência, de modo a manter no processamento apenas as palavras de maior frequência, consideradas as mais importantes. No presente caso, foram mantidas 275 palavras de maior frequência.
+4. Filtragem de palavras por ocorrência, de modo a manter no processamento apenas as palavras de maior frequência, consideradas as mais importantes. No presente caso, foram mantidas **275 palavras** de maior frequência.
 
 5. Criação de 275 colunas no dataframe, para representar a ocorrência de cada palavra em cada registro da base.
 

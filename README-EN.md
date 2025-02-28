@@ -175,7 +175,29 @@ Following that Hackday, we implemented other enhancements to the "feature engine
 - The sub-columns "pack of" and "number of contents in sales package" had their contents combined into a single column, as they contain similar information.
 - The "size" sub-column was converted to numeric information, respecting a size scale, such as XXL, XL, L, M, S, XS, XXS, etc.
 
-## 4.4. Pre-Processing: category encoding
+## 4.4. Description of Goods and Word Count
+
+The database contains many text variables, especially the product description field - "description" - characterized as free text. To leverage this information, code was developed for extracting and counting words (see section 2.7 of the code). The algorithm follows these steps:
+
+1. Selection of a subset of columns that contain relevant text information for a detailed analysis. This includes the "description" column as well as "title", "OTHER DETAILS", "category", among others.
+
+2. Creation of a set of keywords through iteration and search within the selected columns. During processing, **6,820** unique words were found.
+
+3. Word counting, in order to define the relative importance of each word based on its frequency in the database.
+
+4. Filtering of words by occurrence, to only include in the processing the most frequently occurring words, considered the most important ones. In this case, **275 words** with the highest frequency were kept.
+
+5. Creation of 275 columns in the dataframe, to represent the occurrence of each word in each record of the database.
+
+With the inclusion of these 275 new features, a significant improvement was achieved in the performance of the final regression model.
+
+<table align="center">
+<tr><td>
+<img src="img/WordCloud3.png" align="center">
+</td></tr>
+</table>
+
+## 4.5. Pre-Processing: category encoding
 
 The database of this project is characterized by having a significant amount of categorical variables in text form. As most machine learning algorithms require numerical data, their numerical encoding was provided through "one-hot encoding" and "target encoding".
 
@@ -185,13 +207,13 @@ The "target encoding" type, or encoding focused on the target, seeks to measure 
 
 In this project, most categorical variables were encoded using the "target encoding" method.
 
-## 4.5. Pre-Processing: K-MEANS for clustering similar products
+## 4.6. Pre-Processing: K-MEANS for clustering similar products
 
 The K-Means method is an unsupervised clustering algorithm. Some authors suggest using this clustering algorithm as a nonlinear strategy for dimensionality reduction, or to create extra columns to train another model (see Géron<sup>4</sup>, pg. 265).
 
 Applying this idea to the current project, during pre-processing, we used the K-Means method to form groups of products with similar characteristics and then provided this information as a new column for the price prediction model. Various combinations of product characteristics were experimented with to allow for the most efficient clusterizations. In the end, three distinct groupings were utilized, resulting in an increase in model accuracy.
 
-## 4.6. Pre-Processing: variable selection
+## 4.7. Pre-Processing: variable selection
 
 After all the pre-processing, the Random Forest model was used to rank the variables according to their ability to contribute to the outcome of the prediction model. The result is shown in the figure below.
 
