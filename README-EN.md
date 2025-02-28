@@ -175,7 +175,7 @@ Following that Hackday, we implemented other enhancements to the "feature engine
 - The sub-columns "pack of" and "number of contents in sales package" had their contents combined into a single column, as they contain similar information.
 - The "size" sub-column was converted to numeric information, respecting a size scale, such as XXL, XL, L, M, S, XS, XXS, etc.
 
-## 4.4. Description of Goods and Word Count
+## 4.4. Description of goods and words count
 
 The database contains many text variables, especially the product description field - "description" - characterized as free text. To leverage this information, code was developed for extracting and counting words (see section 2.7 of the code). The algorithm follows these steps:
 
