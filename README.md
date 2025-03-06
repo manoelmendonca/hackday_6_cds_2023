@@ -7,7 +7,26 @@ NO VAREJO DA MODA
 
 ![banner](img/DeptoModa.jpg)
 
-# 1. O PROBLEMA DE NEGÓCIO
+# 1. INTRODUÇÃO
+
+Este relatório descreve os detalhes do projeto de Ciência de Dados referente à criação de um **Algoritmo de Regressão** utilizando *machine learning* para previsão dos preços de produtos em uma empresa de e-commerce.
+
+Em resumo, neste projeto fizemos uso das seguintes ferramentas e técnicas:
+
+- **Ferramentas**: VS-Code, Jupyter Notebook, Mini Conda, GitHub, GPT-4
+- **Programação & Bibliotecas**: Python, Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn
+- **Modelos de Machine Learning para Regressão**: Regressão Linear, Random Forest, XGBoost, CatBoost, LightGBM, Voting Regressor
+- **Modelo de Machine Learning para Clusterização**: K-Means
+- **Seleção de Features & Validação**: Boruta, Cross-Validation, Optuna
+
+Os arquivos de dados foram fornecidos pela administração do evento Hackday, contendo 23.309 registros, e estão disponíveis na respectiva página do [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview). Foram testados cinco algoritmos de aprendizado de máquina (seção 5 do código), e o *Random Forest Regressor* foi selecionado como o modelo final devido ao seu desempenho superior na métrica utilizada (SMAPE - *Symmetric Means Absolute Percentage Error*).
+
+Os produtos finais podem ser conferidos abaixo na seção 2.2 e na seção 7 deste relatório.
+
+
+# 2. O PROBLEMA DE NEGÓCIO & O PLANO DE SOLUÇÃO
+
+## 2.1. O Problema
 
 Nesse ambiente fictício, a empresa Dados & Decotes atua no e-commerce no ramo de moda masculina e feminina com foco em roupas, calçados e acessórios. O desafio atual da varejista é **otimizar os preços dos seus produtos** de modo a maximizar o lucro nas vendas.
 
@@ -23,18 +42,17 @@ O fluxograma ilustra o processo atual e a introdução da nova etapa de precific
 </td></tr>
 </table>
 
+O desafio da Eequipe de Cientistas de Dados é encontrar quais os preços das novas mercadorias, com base no histórico de preços e nas características das mercadorias de maior sucesso em vendas nas duas primeiras etapas de precificação.
 
-# 2. PLANEJAMENTO DA SOLUÇÃO
-
-O desafio da Eequipe de Cientistas de Dados é encontrar quais os preços dos novos produtos, com base no histórico de preços e nas características dos produtos de maior sucesso em vendas nas duas primeiras etapas de precificação.
-
-## 2.1. Produto Final
+## 2.2 Produto Final
 
 São dois os resultados esperados:
+
 1. O desenvolvimento de um procedimento de análise de dados e <i>machine learning</i> projetado para atender as demandas da empresa quanto a previsão de preços de mercadorias, e
 2. Elaboração de [insights](#72-os-principais-insights) relacionados ao negócio, a partir da análise dos dados.
 
-## 2.2. Estratégia de Solução
+
+## 2.3. Estratégia de Solução
 
 O trabalho foi realizado seguindo o método CRISP-DM<sup>1</sup>, ou "<i>Cross Industry Standard Process for Data Mining</i>", uma abordagem cíclica objetivando aprimorar a qualidade e agilizar a entrega de resultado em projetos de Ciência de Dados. O método pode ser resumido no seguinte conjunto de etapas:
 1. Entendimento do negócio

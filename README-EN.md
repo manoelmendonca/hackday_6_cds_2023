@@ -8,7 +8,26 @@ IN FASHION RETAIL
 ![banner](img/DeptoModa.jpg)
 
 
-# 1. THE BUSINESS PROBLEM
+# 1. INTRODUCTION
+
+This report describes the details of the Data Science project related to the development of a **Regression Algorithm** using machine learning to predict product prices in an e-commerce company.  
+
+In summary, in this project, we utilized the following tools and techniques:  
+
+- **Tools**: VS-Code, Jupyter Notebook, Mini Conda, GitHub, GPT-4  
+- **Programming & Libraries**: Python, Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn  
+- **Machine Learning Models for Regression**: Linear Regression, Random Forest, XGBoost, CatBoost, LightGBM, Voting Regressor  
+- **Machine Learning Model for Clustering**: K-Means  
+- **Feature Selection & Validation**: Boruta, Cross-Validation, Optuna  
+
+The data files were provided by the Hackday event administration, containing 23,309 records, and are available on the respective [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview) page. Five machine learning algorithms were tested (section 5 of the code), and the Random Forest Regressor was selected as the final model due to its superior performance according to the evaluation metric used (SMAPE - Symmetric Mean Absolute Percentage Error).  
+
+The final products can be found in section 2.2 and section 7 of this report.  
+
+
+# 2. THE BUSINESS PROBLEM & THE SOLUTION PLAN
+
+## 2.1. The Problem
 
 In this fictional environment, the company Dados & Decotes operates in e-commerce in the field of men's and women's fashion focusing on clothing, footwear, and accessories. The current challenge for the retailer is to **optimize product prices** in order to maximize profit from sales.
 
@@ -24,18 +43,16 @@ The flowchart illustrates the current process and the introduction of the new pr
 </td></tr>
 </table>
 
+The challenge for the Data Science Team is to determine the prices of new merchandise, based on the pricing history and characteristics of the most successful merchandise in the first two pricing stages.
 
-# 2. SOLUTION PLANNING
 
-The challenge for the Data Science Team is to determine the prices of new products, based on the pricing history and characteristics of the most successful products in the first two pricing stages.
-
-## 2.1. Final Product
+## 2.2. Final Product
 
 There are two expected outcomes:
 1. The development of a data analysis and machine learning procedure designed to meet the company's demands for predicting merchandise prices, and
 2. The elaboration of [business-related insights](#72-main-insights) from the data analysis.
 
-## 2.2. Solution Strategy
+## 2.3. Solution Strategy
 
 The work was carried out following the CRISP-DM<sup>1</sup> method, or "Cross Industry Standard Process for Data Mining", a cyclic approach aimed at improving quality and speeding up the delivery of results in Data Science projects. The method can be summarized in the following set of steps:
 1. Business understanding
