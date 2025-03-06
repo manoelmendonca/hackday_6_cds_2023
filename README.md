@@ -19,7 +19,7 @@ Em resumo, neste projeto fizemos uso das seguintes ferramentas e técnicas:
 - **Modelo de Machine Learning para Clusterização**: K-Means
 - **Seleção de Features & Validação**: Boruta, Cross-Validation, Optuna
 
-Os arquivos de dados foram fornecidos pela administração do evento Hackday, contendo 23.309 registros, e estão disponíveis na respectiva página do [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview). Foram testados cinco algoritmos de aprendizado de máquina (seção 5 do código), e o *Random Forest Regressor* foi selecionado como o modelo final devido ao seu desempenho superior na métrica utilizada (SMAPE - *Symmetric Means Absolute Percentage Error*).
+Os arquivos de dados foram fornecidos pela administração do evento Hackday, contendo 23.309 registros, e estão disponíveis na respectiva página do [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview). Foram testados cinco algoritmos de aprendizado de máquina (seção 5 do código), e o *Random Forest Regressor* foi selecionado como o modelo final devido ao seu desempenho superior na métrica utilizada (SMAPE - *Symmetric Mean Absolute Percentage Error*).
 
 Os produtos finais podem ser conferidos abaixo na seção 2.2 e na seção 7 deste relatório.
 
