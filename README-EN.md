@@ -22,7 +22,7 @@ In summary, in this project, we utilized the following tools and techniques:
 
 The data files were provided by the Hackday event administration, containing 23,309 records, and are available on the respective [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview) page. Five machine learning algorithms were tested (section 5 of the code), and the Random Forest Regressor was selected as the final model due to its superior performance according to the evaluation metric used (SMAPE - Symmetric Mean Absolute Percentage Error).  
 
-The final products can be found in section 2.2 and section 7 of this report.  
+The final products can be found in [section 2.2](#22-final-product) and [section 7](#7-results) of this report.  
 
 
 # 2. THE BUSINESS PROBLEM & THE SOLUTION PLAN
@@ -188,7 +188,7 @@ In addition to the pre-processing of the "product_details" column mentioned abov
 - The "images" column was used to count the number of photographs available for each product.
 
 Following that Hackday, we implemented other enhancements to the "feature engineering" stage, resulting in improved model accuracy. The new techniques used were as follows:
-- Word Count: The "title" and "description" columns contain extensive free-form text describing the merchandise. Thus, a count of all words was conducted, which, once ranked, were converted into 220 binary columns indicating which words define each product. This technique was also used with other sub-columns such as "other details" and "generic name."
+- Word Count: The "title" and "description" columns contain extensive free-form text describing the merchandise. Thus, a count of all words was conducted, which, once ranked, were converted into 275 binary columns indicating which words define each product (section 2.7 of the code). This technique was also used with other sub-columns such as "other details" and "generic name". By applying this technique, we were able to reduce the model error from 9.1148 to 8.1864.
 - The sub-columns "pack of" and "number of contents in sales package" had their contents combined into a single column, as they contain similar information.
 - The "size" sub-column was converted to numeric information, respecting a size scale, such as XXL, XL, L, M, S, XS, XXS, etc.
 
@@ -206,7 +206,7 @@ The database contains many text variables, especially the product description fi
 
 5. Creation of 275 columns in the dataframe, to represent the occurrence of each word in each record of the database.
 
-With the inclusion of these 275 new features, a significant improvement was achieved in the performance of the final regression model.
+With the inclusion of these 275 new features, a significant improvement was achieved in the performance of the final regression model, which had its SMAPE error reduced from 9.1148 to 8.1864.
 
 <table align="center">
 <tr><td>

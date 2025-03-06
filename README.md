@@ -21,7 +21,7 @@ Em resumo, neste projeto fizemos uso das seguintes ferramentas e técnicas:
 
 Os arquivos de dados foram fornecidos pela administração do evento Hackday, contendo 23.309 registros, e estão disponíveis na respectiva página do [Kaggle](https://www.kaggle.com/competitions/product-price-predicition-20/overview). Foram testados cinco algoritmos de aprendizado de máquina (seção 5 do código), e o *Random Forest Regressor* foi selecionado como o modelo final devido ao seu desempenho superior na métrica utilizada (SMAPE - *Symmetric Mean Absolute Percentage Error*).
 
-Os produtos finais podem ser conferidos abaixo na seção 2.2 e na seção 7 deste relatório.
+Os produtos finais podem ser conferidos abaixo na [seção 2.2](#2-o-problema-de-neg%C3%B3cio--o-plano-de-solu%C3%A7%C3%A3o) e na [seção 7](#7-resultados) deste relatório.
 
 
 # 2. O PROBLEMA DE NEGÓCIO & O PLANO DE SOLUÇÃO
@@ -186,8 +186,8 @@ Além do pré-processamento da coluna "product_details" citado acima, os seguint
 - As sub-colunas "fabric" (tipo de tecido) e "brand fit" (~forma do produto) foram utilizadas para gerar as colunas binárias "has_cotton", "has_polyester", "has_lycra", "is_regular", "is_slim" e "is_fit".
 - A coluna "images" foi utilizada para contar o número de fotografias disponíveis para cada produto.
 
-Posteriormente àquele Hackday, implementamos outros aprimoramentos à etapa de "feature engineering", resultando em melhoria da acurácia do modelo. As novas técnicas utilizadas foram as seguintes:
-- Contagem de Palavras: as colunas "title" e "description" contêm extensos textos livres descritivos das mercadorias. Assim, foi realizada a contagem de todas as palavras que, ranqueadas, foram convertidas em 220 colunas binárias indicativas de quais palavras definem cada produto. Essa técnica foi utilizada também com outras sub-colunas, como "other details" e "generic name".
+Posteriormente àquele Hackday, implementamos outros aprimoramentos à etapa de *feature engineering*, resultando em melhoria da acurácia do modelo. As novas técnicas utilizadas foram as seguintes:
+- Contagem de Palavras: as colunas "title" e "description" contêm extensos textos livres descritivos das mercadorias. Assim, foi realizada a contagem de todas as palavras que, ranqueadas, foram convertidas em 275 colunas binárias indicativas de quais palavras definem cada produto (seção 2.7 do código). Essa técnica foi utilizada também com outras sub-colunas, como "other details" e "generic name". Com a aplicação dessa técnica, conseguimos reduzir o erro do modelo, de 9,1148 para 8,1864.
 - As sub-colunas "pack of" e "number of contents in sales package" tiveram seu conteúdo reunido em uma única coluna, dado conterem informações semelhantes.
 - A sub-coluna "size" foi convertida para informação numérica, respeitando uma grade de tamanhos, do tipo XXL, XL, L, M, S, XS, XXS, etc.
 
@@ -205,7 +205,7 @@ A base de dados contém muitas variáveis em texto, em especial o campo de descr
 
 5. Criação de 275 colunas no dataframe, para representar a ocorrência de cada palavra em cada registro da base.
 
-Com a inclusão dessas 275 novas *features*, foi possível obter expressiva melhoria no desempenho do modelo final de regressão.
+Com a inclusão dessas 275 novas *features*, foi possível obter expressiva melhoria no desempenho do modelo final de regressão, que teve seu erro SMAPE reduzido de 9,1148 para 8,1864.
 
 <table align="center">
 <tr><td>
